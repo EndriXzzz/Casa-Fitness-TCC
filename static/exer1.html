@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="exer.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        referrerpolicy="no-referrer"></script>
+    <title>Exercise</title>
+</head>
+<style>
+    body {
+        background-color: #2e2e2e;
+    }
+</style>
+
+<body>
+
+    <section class="exer">
+        <div class="content">
+            <div class="tittle">
+                <h1>Polichinelo</h1>
+            </div>
+            <div class="video">
+                <img src="vid/nivel 1 - facil/Polichinelo.gif"></img>
+            </div>
+            <div class="buttons">
+                <button class="inst">INSTRUÇÃO</button>
+                <a href="exer2.html"><button class="next">PRÓXIMO</button></a>
+            </div>
+        </div>
+        <div class="instruções">
+            <div class="inst-info">
+                <div class="close"><i class='bx bx-x'></i></div>
+                <div class="title">Polichinelo</div>
+                <div class="text"> Com as pernas unidas e os braços estendidos ao lado do corpo, dê um salto para cima,
+                    ao mesmo tempo, afaste os pés lateralmente e bata as mãos acima da cabeça. Volte para a posição
+                    inicial e depois agache, tocando as mãos no solo. Estenda as pernas e repita o exercício.</div>
+            </div>
+        </div>
+    </section>
+    <script>
+        // Exercise
+        const playexer = document.querySelector(".inst");
+        const fecha = document.querySelector(".close");
+        const tela = document.querySelector(".instruções");
+
+        playexer.onclick = () => {
+            tela.classList.add("active");
+        }
+
+        fecha.onclick = () => {
+            tela.classList.remove("active");
+        }
+    </script>
+</body>
+
+</html>
