@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="capturar.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section class="main">
+        <h1 class="title">CAPTURAR</h1>
+        <div class="camera">
+            <img id="photo" src="img/camera-500x500px.png" alt="cam">
+            <video width="100%" id="video">Video stream not available.</video>
+        </div>
+        <div class="botoes">
+            <button class="btn-capture">INSTRUÇÂO</button>
+            <button id="startbutton" class="btn-capture">ANALISAR</button>
+        </div>
+    </section>
+
+    <div class="instruções">
+        <div class="inst-info">
+            <div class="close"><i class='bx bx-x'></i></div>
+            <img src="img/Pose-T-PNG.png" alt="">
+            <div class="title">POSE T</div>
+            <div class="text">Nesta analise é necessário verificar se a página esta sendo acessado por uma pessoa e não
+                um robo, é necessário que o usuário faça a posição pedida da parte de cima do corpo para a inteligência
+                artificial reconheça que é um humano.</div>
+        </div>
+
+        <canvas id="canvas">
+        </canvas>
+
+        <script>
+            // Exercise
+            const playexer = document.querySelector(".btn-capture");
+            const fecha = document.querySelector(".close");
+            const tela = document.querySelector(".instruções");
+
+            playexer.onclick = () => {
+                tela.classList.add("active");
+            }
+
+            fecha.onclick = () => {
+                tela.classList.remove("active");
+            }
+        </script>
+        <script src="script.js"></script>
+        <script>startup();</script>
+
+</body>
+
+</html>
